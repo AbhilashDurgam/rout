@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Your Brand Name</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+h3 {
+    margin-top: 15px;
+    color: #34495e;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-member {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column; /* Stack items on small screens */
+    }
+
+    .team-member {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt="" width="50px" style="padding: 0;"></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="./index.html"><img src="img/logo.png" alt="" width="50px" style="padding: 0;"></a>
+        </div>
+    </div>
+
+    <header class="header m-0" >
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="" width="50px" style="padding: 0;"></a><span class="mt-4 " id="cap" style="font-size: 10px; margin-right: 70px;">
+                            Find your way to savings
+                        </span>
+                        <h1 id="name">BUY ROUTE</h1>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-12">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./index.html">Women's Ware</a></li>
+                            <li><a href="./shop.html">Men's Ware</a></li>
+                            <li><a href="#">Kid's Ware</a></li>
+                            <li><a href="#">Electronics</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">True Wireless</a></li>
+                                    <li><a href="#">Speaker</a></li>
+                                    <li><a href="#">wired Earphones</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">About</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>About Us</h1>
+
+        <section id="our-story">
+            <h2>Our Story</h2>
+            <p>Welcome to <strong>Your Brand Name</strong>! We started our journey in <strong>[Year/Location]</strong> with a passion for <strong>[Your Inspiration]</strong>. Our mission is to provide <strong>[Products/Services]</strong> that <strong>[Value Proposition]</strong>.</p>
+        </section>
+
+        <section id="meet-the-team">
+            <h2>Meet the Team</h2>
+            <p>We are a small but dedicated team of <strong>[Number]</strong> people who believe in <strong>[Core Values]</strong>.</p>
+            <div class="team-container">
+                <div class="team-member">
+                    <h3>Team Member 1</h3>
+                    <p>Role: [Role] - [Short Bio]</p>
+                </div>
+                <div class="team-member">
+                    <h3>Team Member 2</h3>
+                    <p>Role: [Role] - [Short Bio]</p>
+                </div>
+                <div class="team-member">
+                    <h3>Team Member 3</h3>
+                    <p>Role: [Role] - [Short Bio]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-products">
+            <h2>Our Products</h2>
+            <p>At <strong>Your Brand Name</strong>, we pride ourselves on offering <strong>[Describe Products]</strong>. Each item is carefully crafted to ensure <strong>[Quality Assurance]</strong>.</p>
+        </section>
+
+        <section id="commitment-to-customers">
+            <h2>Commitment to Customers</h2>
+            <p>Your satisfaction is our top priority. We are committed to providing excellent customer service and have a <strong>[Return/Exchange Policy]</strong>.</p>
+        </section>
+
+        <section id="community-engagement">
+            <h2>Community Engagement</h2>
+            <p>We believe in giving back to the community. <strong>[Describe any community or sustainability initiatives]</strong>.</p>
+        </section>
+
+        <section id="connect-with-us">
+            <h2>Connect with Us</h2>
+            <p>Follow us on <strong>[Social Media Platforms]</strong> to stay updated on our latest products and offers. If you have any questions, feel free to reach out!</p>
+            <ul>
+                <li><a href="[Facebook URL]">Facebook</a></li>
+                <li><a href="[Instagram URL]">Instagram</a></li>
+                <li><a href="[Twitter URL]">Twitter</a></li>
+                <li><a href="[Your Website Contact Page URL]">Contact Us</a></li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-7">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="./index.html"><img src="img/logo.png" alt="" width="50px" style="padding: 0;"></a> &nbsp;<sapn> Find your way to savings</sapn>
+                            </div>
+                            <p>Buyroute is an e-commerce website offering all products for sale with a seamless shopping experience.</p>
+                            <!-- <div class="footer__payment">
+                                <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                                <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                            </div> -->
+                            <div class="footer__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-5">
+                        <div class="footer__widget">
+                            <h6>Quick links</h6>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer__widget">
+                            <h6>Account</h6>
+                            <ul>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Orders Tracking</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8 col-sm-8">
+                        <div class="footer__newslatter">
+                            <h6>NEWSLETTER</h6>
+                            <form action="#">
+                                <input type="text" placeholder="Email">
+                                <button type="submit" class="site-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <div class="footer__copyright__text" style="width: 100%; color: white !important;" >
+                            <p>Copyright &copy;
+                                2022 All rights reserved | This
+                                website is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Buyroute</a>
+                            </p>
+                        </div>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
