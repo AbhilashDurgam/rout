@@ -1,0 +1,51 @@
+body{
+    /* background: url(/img/background.jpg); */
+    /* background: url(/img/WhatsApp\ Image\ 2024-11-21\ at\ 08.04.22_38952675.jpg); */
+    background-position: center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+.popup{
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+}
+.popup img{
+    width: 200px;
+    margin-top: -150px;
+}
+.popup h1{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    margin-bottom: 15px;
+}
+.popup a{
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(5, 246, 209);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 40px 5px 40px ;
+    color: white;
+}
+.popup span{
+    background: linear-gradient(red,red,red,white,black,black,black);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    line-height: 1;
+}

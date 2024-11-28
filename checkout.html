@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -22,7 +21,7 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
    (function(){
-      emailjs.init("service_t889c5b"); // Replace with your EmailJS user ID
+      emailjs.init("service_9lxklg6"); // Replace with your EmailJS user ID
    })();
 </script>
 </head>
@@ -187,7 +186,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+            </div>
     </section>
     <!-- Checkout Section End -->
 
@@ -337,61 +336,99 @@
     <!-- Search End -->
 
     <!-- SAP script  -->
-    <script>
-        const productName = localStorage.getItem('productName');
-        const price = localStorage.getItem('price');
-        const photo = localStorage.getItem('photo');
+   <script>
+    // Retrieve product details
+    const productName = localStorage.getItem('productName');
+    const productPrice = localStorage.getItem('productPrice');
+    const productImage = localStorage.getItem('productImage');
 
-        document.getElementById('product-name').innerText = productName;
-        document.getElementById('photo').src = photo;
+    // Populate checkout page
+    document.getElementById('product-name').innerText = productName || "No Product Selected";
+    document.getElementById('photo').src = productImage || "default.jpg";
 
-        const priceElements = document.getElementsByClassName('price');
-        for (let i = 0; i < priceElements.length; i++) {
-            priceElements[i].innerText = price;
-        }
-    </script>
+    const priceElements = document.getElementsByClassName('price');
+    Array.from(priceElements).forEach((element) => {
+        element.innerText = productPrice || "0";
+    });
+</script>
 
 
 <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        // Initialize EmailJS
+        try {
+            emailjs.init("VNWhf6qeScqYJySeI"); // Replace with your EmailJS public key
+            console.log("EmailJS initialized successfully.");
+        } catch (error) {
+            console.error("Error initializing EmailJS:", error);
+        }
+    });
+
+    // Function to send email
     function sendEmail() {
-       var firstName = document.getElementById('fname').value;
-       var lastName = document.getElementById('lname').value;
-       var country = document.getElementById('country').value;
-       var address = document.getElementById('address').value;
-       var city = document.getElementById('city').value;
-       var state = document.getElementById('state').value;
-       var zip = document.getElementById('code').value;
-       var phone = document.getElementById('number').value;
-       var email = document.getElementById('email').value;
-       var productName = document.getElementById('product-name').innerText;
-       var total = document.querySelector('.checkout__order__total .price').innerText;
- 
-       var templateParams = {
-          firstName: firstName,
-          lastName: lastName,
-          country: country,
-          address: address,
-          city: city,
-          state: state,
-          zip: zip,
-          phone: phone,
-          email: email,
-          notes: notes,
-          productName: productName,
-          total: total
-       };
- 
-       emailjs.send('service_t889c5b', 'template_sslpgjd', templateParams)
-       .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-          alert('Order placed successfully!');
-       }, function(error) {
-          console.log('FAILED...', error);
-          alert('Failed to place order.');
-       });
+        console.log("sendEmail function started.");
+
+        // Collect form data
+        const firstName = document.getElementById('fname').value.trim();
+        const lastName = document.getElementById('lname').value.trim();
+        const country = document.getElementById('country').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const city = document.getElementById('city').value.trim();
+        const state = document.getElementById('state').value.trim();
+        const zip = document.getElementById('code').value.trim();
+        const phone = document.getElementById('number').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        // Validation
+        if (!firstName || !lastName || !email || !address || !city || !state || !zip || !phone) {
+            alert("Please fill in all the required fields.");
+            console.log("Validation failed: Missing required fields.");
+            return;
+        }
+        console.log("Validation passed.");
+
+        // Collect product details from localStorage
+        const productName = localStorage.getItem('productName') || "Not specified";
+        const productPrice = localStorage.getItem('productPrice') || "Not specified";
+        const productImage = localStorage.getItem('productImage') || "Not available";
+
+        console.log("Product details fetched:", { productName, productPrice, productImage });
+
+        // Prepare email data
+        const templateParams = {
+            firstName,
+            lastName,
+            country,
+            address,
+            city,
+            state,
+            zip,
+            phone,
+            email,
+            productName,
+            productPrice,
+            productImage
+        };
+        // Send email using EmailJS
+        emailjs
+            .send("service_9lxklg6", "template_o2usmqe", templateParams)
+            .then((response) => {
+                console.log("SUCCESS!", response.status, response.text);
+
+                // Reset form
+                document.querySelector('.checkout__form').reset();
+
+                // Redirect to confirmation page
+                window.location.href = "confirmation.html";
+            })
+            .catch((error) => {
+                alert("Failed to send email. Please check your internet connection or try again later.");
+                console.error("EmailJS FAILED...", error);
+            });
     }
- </script>
- 
+</script>
+
+
 
 
     <!-- Js Plugins -->

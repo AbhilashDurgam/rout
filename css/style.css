@@ -643,6 +643,18 @@ ol {
 	margin-left: 4px;
 }
 
+/* error */
+.error {
+    border: 2px solid red;
+    outline: none;
+}
+
+.error:focus {
+    border-color: darkred;
+}
+
+/* error end  */
+
 /* ---------------------- 
          carousel
 ---------------------- */
