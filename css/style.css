@@ -2304,11 +2304,11 @@ ol {
 	font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 479px){
 	#name {
 		display: block;
 		text-align: center;
-		font-size: 20px;
+		/* font-size: 20px; */
 		color: #333;
 		margin: 10px 0;
 		background: linear-gradient(red, Black);
@@ -2317,6 +2317,25 @@ ol {
 		-webkit-text-fill-color: transparent;
 		font-weight: bold;
 		font-size: 30px;
+	}
+
+	#cap {
+		display: none;
+	}
+}
+@media only screen and (max-width: 432px){
+	#name {
+		display: block;
+		text-align: center;
+		font-size: 20px ;
+		color: #ffffff;
+		margin: 10px 0;
+		background: linear-gradient(red, rgb(255, 255, 255));
+		background-clip: border-box;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+		/* font-size: 30px; */
 	}
 
 	#cap {
